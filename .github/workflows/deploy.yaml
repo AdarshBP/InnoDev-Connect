@@ -1,0 +1,33 @@
+name: Deploy React App
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'  # Specify the Node.js version
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@4.4.0
+      with:
+        branch: gh-pages  # Branch where the app will be deployed
+        folder: build      # Folder with the built app
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

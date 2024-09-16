@@ -9,10 +9,11 @@ export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav >
-      <Link to="/" className="title bg-white lg:bg-opacity-75 gap-4">
-        WeekendWork
+    <nav  className="title bg-white " style={{zIndex: '999'}}>
+      <Link to="/" className="title bg-white  gap-4">
+        InnoDev Connect
       </Link>
+      <div className="px-20">
       <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? <TfiClose /> : <FiAlignJustify />}
       </div>
@@ -30,6 +31,8 @@ export const Navbar = () => {
           <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
+      </div>
+      
     </nav>
   );
 };

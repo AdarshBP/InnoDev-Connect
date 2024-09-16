@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import "./Navbar.css";
+import "./NavBar.css";
 import { Link, NavLink } from "react-router-dom";
 import { FiAlignJustify } from "react-icons/fi";
 import { TfiClose } from "react-icons/tfi";

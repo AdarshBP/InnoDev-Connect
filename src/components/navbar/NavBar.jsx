@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import "./NavBar.css";
 import { Link, NavLink } from "react-router-dom";
 import { FiAlignJustify } from "react-icons/fi";
@@ -22,10 +21,10 @@ export const Navbar = () => {
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/about">About Us</NavLink>
+          <NavLink to="/services">Services</NavLink>
         </li>
         <li>
-          <NavLink to="/services">Services</NavLink>
+          <NavLink to="/about">About Us</NavLink>
         </li>
         <li>
           <NavLink to="/contact">Contact</NavLink>

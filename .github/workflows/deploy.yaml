@@ -12,6 +12,7 @@ jobs:
     permissions:  # Add permissions block
       id-token: write
       contents: read  # Required to read the repository contents
+      pages: write 
 
     steps:
     - name: Checkout code

@@ -29,4 +29,3 @@ jobs:
       with:
         branch: gh-pages  # Branch where the app will be deployed
         folder: dist      # Folder with the built app
-        token: ${{ secrets.ACTIONS_DEPLOY_KEY }}

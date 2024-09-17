@@ -29,3 +29,4 @@ jobs:
       with:
         branch: gh-pages  # Branch where the app will be deployed
         folder: dist      # Folder with the built app
+        token: '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'

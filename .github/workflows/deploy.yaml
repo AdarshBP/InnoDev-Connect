@@ -29,5 +29,3 @@ jobs:
       with:
         branch: gh-pages  # Branch where the app will be deployed
         folder: dist      # Folder with the built app
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

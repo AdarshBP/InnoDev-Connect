@@ -9,6 +9,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    permissions:  # Add permissions block
+      id-token: write
+      contents: read  # Required to read the repository contents
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v3

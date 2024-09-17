@@ -28,6 +28,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages  # Branch where the app will be deployed
-        folder: build      # Folder with the built app
+        folder: dist      # Folder with the built app
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

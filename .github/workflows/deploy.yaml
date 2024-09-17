@@ -5,34 +5,18 @@ on:
     branches:
       - main  # Trigger on push to the main branch
 
+permissions:  # Add permissions block
+  id-token: write
+  contents: read  # Required to read the repository contents
+  pages: write 
+
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.build-publish.outputs.page_url }}
     runs-on: ubuntu-latest
-
-    permissions:  # Add permissions block
-      id-token: write
-      contents: read  # Required to read the repository contents
-      pages: write 
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'  # Specify the Node.js version
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Build
-      run: npm run build
-
-    # - name: Deploy
-    #   uses: JamesIves/github-pages-deploy-action@v4
-    #   with:
-    #     branch: gh-pages  # Branch where the app will be deployed
-    #     folder: dist      # Folder with the built app
     - name: Deploy
+      id: build-publish
       uses: bitovi/github-actions-react-to-github-pages@v1.2.4

@@ -24,8 +24,10 @@ jobs:
     - name: Build
       run: npm run build
 
+    # - name: Deploy
+    #   uses: JamesIves/github-pages-deploy-action@v4
+    #   with:
+    #     branch: gh-pages  # Branch where the app will be deployed
+    #     folder: dist      # Folder with the built app
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        branch: gh-pages  # Branch where the app will be deployed
-        folder: dist      # Folder with the built app
+      uses: bitovi/github-actions-react-to-github-pages@v1.2.4

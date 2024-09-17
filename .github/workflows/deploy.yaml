@@ -28,6 +28,5 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages  # Branch where the app will be deployed
-        folder: build      # Folder with the built app
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        folder: dist      # Folder with the built app
+        token: ${{ secrets.ACTIONS_DEPLOY_KEY }}

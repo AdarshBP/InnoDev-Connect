@@ -1,4 +1,4 @@
-.aboutus-background{
+.contactus-background{
     height: 50vh;
     min-height: 50vh;
     background-image: url("https://tis-tis-io-asset-prd.s3.eu-central-1.amazonaws.com/get_in_touch_9fd4f5b8b4.png");
@@ -7,8 +7,9 @@
 }
 
 @media (max-width: 1024px) {
-  .aboutus-background {
+  .contactus-background {
     height: 25vh;
     min-height: 25vh;
   }
 }
+

@@ -1,22 +1,22 @@
-name: Deploy React App
+# name: Deploy React App
 
-on:
-  push:
-    branches:
-      - main  # Trigger on push to the main branch
+# on:
+#   push:
+#     branches:
+#       - main  # Trigger on push to the main branch
 
-permissions:  # Add permissions block
-  id-token: write
-  contents: read  # Required to read the repository contents
-  pages: write 
+# permissions:  # Add permissions block
+#   id-token: write
+#   contents: read  # Required to read the repository contents
+#   pages: write 
 
-jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.build-publish.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-    - name: Deploy
-      id: build-publish
-      uses: bitovi/github-actions-react-to-github-pages@v1.2.4
+# jobs:
+#   deploy:
+#     environment:
+#       name: github-pages
+#       url: ${{ steps.build-publish.outputs.page_url }}
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: Deploy
+#       id: build-publish
+#       uses: bitovi/github-actions-react-to-github-pages@v1.2.4
